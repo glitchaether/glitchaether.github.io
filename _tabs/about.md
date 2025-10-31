@@ -5,19 +5,27 @@ order: 4
 ---
 
 # Hello
+Thanks for checking out my portfolio.
+It's still a work in progress, but I'll be adding new projects and updates soon.
 
-Thank you for looking at my portfolio site. Its a little... empty I know, but belive me a lot of things is coming.
+# My Journey
+## Early Beginnings
+About five or six years ago, my parents got me a new MacBook - a big step up from my old Samsung laptop from 2003 with an Intel Dual Core processor. Back then, even opening a simple text editor could take up to twenty minutes.
+With the new laptop, I started exploring software and found Scratch, where I made my first basic games. After a while, I hit the limits of what Scratch could do and wanted to try something beyond 2D games. While playing Flood Escape on Roblox, I realized Roblox had its own development tool: Roblox Studio.
+At first, Roblox Studio felt overwhelming, so I took a break from it. Later on, I came across a Polish YouTube series teaching Luau scripting, which helped me learn the basics. That's when I started taking programming more seriously.
 
-# My journey
+## First Commission Experience
+In February 2022, I joined a small Polish development team working on a Tower Defense Simulator (TDS)-style game. I didn't have much experience at the time, but I decided to learn as much as I could by following tutorials and studying examples.
+After a few months, we launched an alpha version of the game. It still had plenty of issues, but the process taught me a lot about teamwork, problem-solving, and game development. I eventually left the project for personal reasons, but I came away with a solid foundation in scripting and organizing projects.
 
-## Crazy starts
+## Rediscovering Motivation
+After a handful of smaller projects that never quite finished, I took a short break from development. During that time, I came across a video explaining how bigger studios organize their Roblox projects using Rojo, Wally, Visual Studio Code, and Git.
+That discovery completely changed how I worked. I learned to organize my code professionally, use version control, and bring outside tools into my workflow. That was the start of a much more disciplined and professional approach to development.
 
-Around 5-6 years ago my parents bought a brand new macbook. It was a BIG upgrade, because only laptop I had was likeon old samsung from 2003 with intel dual core. Yea basically notepad was opening for like 20 minutes lmao (Im dead serious rn). So I was so happy I started using it everyday for some time after school and randomly stumbled upon Scratch. I started coding more and more and suddenly felt a little disappointed with fact I can do only 2d games there (but for sure some people had made 3d so might be my skill issue xd) so I was later playing a roblox game called "Flood Escape" and suddenly my brain went "Oh yea... roblox has studio..." and went straight into studio. Oh my god I felt like I was behind some airplane cockpit. And when I saw that you need to write code instead of drag and drop blocks I said "hell nah" and closed it for a year. Then I stumbled upon some roblox scripting series that explains luau in my native language which is polish. And after watching them I went straight into practicing until my very first serious project.
+## Lessons from Commission Work
+To get more experience and build my portfolio, I started taking on commissions - some paid, some unpaid. While some projects went smoothly, I also ran into a few unprofessional clients and even a couple of scams.
+Even with those setbacks, each project taught me something. I got better at communicating, learned the importance of clear expectations, and saw how valuable professional boundaries are. I also learned how to handle tough situations and maintain trust in my client relationships.
 
-## How I did comission with youtube 💀
-
-Yea heh thats a... idk. Anyway on Feb 2022 I came into contact with a polish dev that were assembling a team to create a tds and I applied to this job. He asked me if I can do it and I said "yea sure" (spoiler: I didn't had clue what to do). When I saw every asset I went straight into coding and went blocked in about 1 second LMAO. So what I did was searching some "How to make tds game roblox studio tutorial" on youtube and stumbled upon a GnomeScript guy. He had started a series and it was like blessing. so what I did was copy and paste his work 💀 (peak programmer skills). Yea so later like in 4 months we released alpha (which had HELLA A LOT of bugs) and 2 months later I withdrawn from team due to personal reasons
-
-## How I took my lazy ass from sofa and started improving
-
-After that adventure I had some more projects. However they did not make out in the end....
+## Taking My Work Seriously
+Right now, I'm focused on writing modular, maintainable code and raising the quality of my projects. I'm working on two major developments that highlight how much I've grown technically and how I design larger systems.
+This journey has had its ups and downs, but every step has helped me grow as a developer. I'm still learning, honing my skills, and building projects that reflect both creativity and professionalism.
