@@ -1,87 +1,137 @@
-body {
+/* Reset */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Top bar container */
-.navbar {
-    background-color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 50px;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-/* Left-side website name */
-.logo {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 14px 0;
-}
-
-/* No hover effect on logo */
-.logo:hover {
-    background-color: transparent;
-}
-
-/* Right-side link container */
-.nav-links {
+/* 1. MAIN BACKGROUND IMAGE 
+   This simulates your full-screen content. 
+*/
+.hero-section {
+    /* Use a dark image so white text is visible */
+    background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop') no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
     display: flex;
-    gap: 10px;  /* prevents links from drifting off-screen */
+    justify-content: center;
+    align-items: center;
 }
 
-/* Right buttons */
-.nav-links a {
-    position: relative;
-    display: inline-block;
-    padding: 14px 10px;
-    text-decoration: none;
-    color: white; /* fallback color */
+.hero-section h1 {
+    color: white;
+    font-size: 3rem;
+}
+
+/* 2. TRANSPARENT NAVBAR 
+*/
+.navbar {
+    background: transparent; /* See-through */
+    height: 80px;
+    width: 100%;
+    position: fixed; /* Floats on top of the image */
+    top: 0;
+    left: 0;
+    z-index: 999; /* Ensures it stays above the image */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    /* Optional: Adds a slight gradient at the top so text is readable if image is light */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+}
+
+/* --- Logo (Static) --- */
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
     font-weight: bold;
+    text-decoration: none;
+    cursor: default; 
+}
+.logo:hover {
+    color: #fff; /* Keeps it white */
+}
+
+/* --- Menu Links --- */
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff; /* White text */
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
     transition: all 0.3s ease;
 }
 
-/* Hover: gradient fill + stroke */
-.nav-links a:hover {
-    color: transparent; /* hide normal text color */
-    -webkit-text-fill-color: transparent; /* Chrome/Safari */
-    
-    /* Gradient fill */
-    background-image: linear-gradient(45deg, #0000ff, #00ffff);
+/* --- Hover Effects (Gradient Text + Stroke) --- */
+.nav-link:hover {
+    /* Gradient Text */
+    background: linear-gradient(45deg, #ff00cc, #333399);
     background-clip: text;
     -webkit-background-clip: text;
-}
-
-/* Gradient stroke using pseudo-element */
-.nav-links a::after {
-    content: attr(data-text); /* duplicate the text */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    color: transparent;
     -webkit-text-fill-color: transparent;
     
-    -webkit-text-stroke: 1px transparent; /* fallback */
-    
-    background-image: linear-gradient(45deg, #000088, #008888); /* stroke gradient */
-    background-clip: text;
-    -webkit-background-clip: text;
-    
-    pointer-events: none;
+    /* Colored Stroke */
+    border-bottom: 2px solid #ff00cc;
 }
 
+/* --- Mobile Hamburger --- */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
 
-/* Avoid content going under navbar */
-.content {
-    padding-top: 70px;
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+/* --- RESPONSIVE / MOBILE VIEW --- */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hamburger Animations */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 0; /* Covers top of screen */
+        flex-direction: column;
+        /* MUST HAVE A SOLID BACKGROUND ON MOBILE or text will be unreadable */
+        background-color: #111; 
+        width: 100%;
+        height: 100vh; /* Full screen menu */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2rem 0;
+    }
 }
