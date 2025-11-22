@@ -98,6 +98,9 @@ body {
     padding: 40px;
     border-radius: 15px;
     backdrop-filter: blur(5px);
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-out;
 }
 
 .content-left h1 {
@@ -153,13 +156,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s ease-out;
 }
 
 .image-right img {
     max-width: 100%;
     height: auto;
     max-height: 500px;
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0))
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.6)); 
+}
+
+.slide-active {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
 }
 
 @media screen and (max-width: 768px) {
