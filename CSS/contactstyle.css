@@ -11,6 +11,7 @@ body {
 }
 
 .navbar {
+    background: transparent;
     height: 80px;
     width: 100%;
     position: fixed;
@@ -21,12 +22,61 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
 }
 
-.logo { color: white; text-decoration: none; font-weight: bold; font-size: 1.5rem;}
-.nav-menu { display: flex; list-style: none; gap: 20px;}
-.nav-link { color: white; text-decoration: none;}
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: default; 
+}
+.logo:hover {
+    color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: linear-gradient(45deg, #00ffff, #0000ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    border-bottom: 2px solid #0077ff;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
 
 .hero-section {
     min-height: 100vh;
@@ -39,7 +89,7 @@ body {
     
     padding: 100px 10%;
     
-    background-color: #333333;
+    background-color: #222222;
 }
 
 .content-left {
@@ -73,7 +123,7 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     padding: 15px 20px;
     border-radius: 10px;
     transition: 0.3s ease;
@@ -81,8 +131,8 @@ body {
 }
 
 .social-card:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: #00ffff;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: linear-gradient(45deg, #00ffff, #0000ff);
     transform: translateX(10px);
 }
 
@@ -110,22 +160,36 @@ body {
     max-width: 100%;
     height: auto;
     max-height: 500px;
-    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
 }
 
-@media screen and (max-width: 900px) {
-    .hero-section {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 30px;
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
     }
 
-    .content-left {
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: #111; 
         width: 100%;
-        background: rgba(0,0,0,0.8);
-    }
-    
-    .social-card {
+        height: 100vh;
         justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2rem 0;
     }
 }
