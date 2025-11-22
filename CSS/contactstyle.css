@@ -9,9 +9,6 @@ body {
     background-color: #222222;
     color: white;
     overflow-x: hidden;
-    background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
 }
 
@@ -137,7 +134,6 @@ body {
 
 .social-card:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-color: linear-gradient(45deg, #00ffff, #0000ff);
     transform: translateX(10px);
 }
 
