@@ -171,7 +171,7 @@ body {
 
 .slide-active {
     opacity: 1 !important;
-    transform: translateX(0) !important;
+    transform: translate(0, 0) !important; 
 }
 
 @media screen and (max-width: 900px) {
@@ -220,6 +220,11 @@ body {
         width: 100%;
         max-width: 100%;
         padding: 20px;
+    }
+
+    .content-left, 
+    .image-right {
+        transform: translateY(50px); 
     }
 
     .social-card {
