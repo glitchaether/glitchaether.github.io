@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('is-active');
             navMenu.classList.toggle('active');
-            console.log("Menu clicked!"); // This prints to console if it works
+            console.log("Menu clicked!");
         });
     } else {
         console.error("Menu elements not found!");

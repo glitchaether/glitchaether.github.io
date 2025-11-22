@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: white;
+}
+
+.navbar {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+}
+
+.logo { color: white; text-decoration: none; font-weight: bold; font-size: 1.5rem;}
+.nav-menu { display: flex; list-style: none; gap: 20px;}
+.nav-link { color: white; text-decoration: none;}
+
+.hero-section {
+    min-height: 100vh;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    
+    padding: 100px 10%;
+    
+    background-color: #333333;
+}
+
+.content-left {
+    flex: 1;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.content-left h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+.social-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.social-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #00ffff;
+    transform: translateX(10px);
+}
+
+.social-card img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+.social-card span {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.image-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-right img {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
+}
+
+@media screen and (max-width: 900px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .content-left {
+        width: 100%;
+        background: rgba(0,0,0,0.8);
+    }
+    
+    .social-card {
+        justify-content: center;
+    }
+}
