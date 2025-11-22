@@ -95,7 +95,6 @@ body {
 .content-left {
     flex: 1;
     max-width: 500px;
-    background: rgba(0, 0, 0, 0.6);
     padding: 40px;
     border-radius: 15px;
     backdrop-filter: blur(5px);
@@ -160,6 +159,7 @@ body {
     max-width: 100%;
     height: auto;
     max-height: 500px;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0))
 }
 
 @media screen and (max-width: 768px) {
