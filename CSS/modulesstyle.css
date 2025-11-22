@@ -5,8 +5,8 @@ body {
     color: white;
     overflow-x: hidden;
     background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+        linear-gradient(#262626 1px, transparent 1px),
+        linear-gradient(90deg, #262626 1px, transparent 1px);
     background-size: 40px 40px;
 }
 
@@ -110,8 +110,7 @@ body {
 
 .grid-card:hover {
     background: #444444;
-    border-color: linear-gradient(45deg, #00ffff, #0000ff);
-    transform: translateY(-10px);
+    transform: translateY(-10px) !important;
 }
 
 .card-image {
@@ -121,8 +120,8 @@ body {
 }
 
 .card-image img {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     object-fit: cover;
     transition: 0.3s;
 }
